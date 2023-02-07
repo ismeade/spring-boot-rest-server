@@ -1,7 +1,6 @@
 package com.ade.demo.server.utils;
 
 import com.ade.demo.server.exception.ReturnException;
-import com.ade.demo.server.exception.ReturnExceptionEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +22,7 @@ public class CollectionUtils {
         }
         final Object[] objects = collection.toArray();
         for (int i = 1; i < objects.length; i++) {
+            System.out.println(objects[i].getClass());
             if (!objects[i - 1].getClass().equals(objects[i].getClass())) {
                 return false;
             }

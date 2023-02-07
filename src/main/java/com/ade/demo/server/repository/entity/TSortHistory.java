@@ -14,7 +14,4 @@ public class TSortHistory {
     @Column(name = "date_sorted")
     private String dateSorted;
 
-    private LocalDateTime requestTime;
-
-    private LocalDateTime responseTime;
 }

@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 //@Configuration
 public class ReturnExceptionResolver implements HandlerExceptionResolver {
 
-    private final Logger log = LoggerFactory.getLogger(getClass());
+    private final Logger LOG = LoggerFactory.getLogger(getClass());
 
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) {
-        log.error("{} - {}", httpServletRequest.getMethod(), httpServletRequest.getRequestURI());
+        LOG.error("{} - {}", httpServletRequest.getMethod(), httpServletRequest.getRequestURI());
         return def(e);
     }
 
     private ModelAndView def(Exception e) {
-        log.info(e.getMessage(), e);
+        LOG.info(e.getMessage(), e);
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
         if (e instanceof ReturnException) {
             ReturnException returnException = (ReturnException) e;

@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface SortService {
 
-    List<Object> sort(List<Object> list, String sortType);
+    List<Object> sort(List<Object> list);
 
 }

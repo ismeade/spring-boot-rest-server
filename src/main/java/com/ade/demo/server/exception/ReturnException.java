@@ -2,7 +2,23 @@ package com.ade.demo.server.exception;
 
 import org.springframework.http.HttpStatus;
 
+/**
+ *
+ */
 public class ReturnException extends IllegalArgumentException {
+
+    private static final long serialVersionUID = 1L;
+
+    public static final ReturnException SORT_ERROR_NOT_SUPPORTED_DATA_FORMAT =
+            new ReturnException(
+                    HttpStatus.BAD_REQUEST,
+                    "SORT_ERROR_NOT_SUPPORTED_DATA_FORMAT",
+                    "不支持该数据类型排序");
+    public static final ReturnException SORT_ERROR_NOT_SUPPORTED_HETEROGENEOUS_DATA =
+            new ReturnException(
+                    HttpStatus.BAD_REQUEST,
+                    "SORT_ERROR_NOT_SUPPORTED_HETEROGENEOUS_DATA",
+                    "不支持不同数据类型排序");
 
     protected HttpStatus httpStatus;
     protected String code;
@@ -23,10 +39,6 @@ public class ReturnException extends IllegalArgumentException {
         this("系统内部错误");
     }
 
-    public ReturnException(ReturnExceptionEnum returnExceptionEnum) {
-        this(returnExceptionEnum.getHttpStatus(), returnExceptionEnum.getCode(), returnExceptionEnum.getMessage());
-    }
-
     public HttpStatus getHttpStatus() {
         return httpStatus;
     }
@@ -39,4 +51,5 @@ public class ReturnException extends IllegalArgumentException {
     public String getMessage() {
         return message;
     }
+
 }

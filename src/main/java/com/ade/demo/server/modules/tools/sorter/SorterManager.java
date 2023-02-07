@@ -1,4 +1,4 @@
-package com.ade.demo.server.modules.tools.service;
+package com.ade.demo.server.modules.tools.sorter;
 
 import java.util.Comparator;
 import java.util.Map;

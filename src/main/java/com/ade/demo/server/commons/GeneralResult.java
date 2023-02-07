@@ -3,7 +3,6 @@ package com.ade.demo.server.commons;
 import java.io.Serializable;
 
 public class GeneralResult implements Serializable {
-
     private String code;
     private String message;
     private Object data;
