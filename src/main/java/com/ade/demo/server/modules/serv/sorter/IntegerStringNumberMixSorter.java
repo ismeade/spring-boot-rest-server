@@ -9,7 +9,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
- * Integer和String数据 混合排序器
+ * Integer和String数据 混合排序器，可扩展成任意类型数字排序器
  */
 @Component
 public class IntegerStringNumberMixSorter implements Sorter, InitializingBean {
