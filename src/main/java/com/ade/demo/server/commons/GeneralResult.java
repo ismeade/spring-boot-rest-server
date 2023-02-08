@@ -2,7 +2,11 @@ package com.ade.demo.server.commons;
 
 import java.io.Serializable;
 
+/**
+ * 统一返回消息
+ */
 public class GeneralResult implements Serializable {
+
     private String code;
     private String message;
     private Object data;

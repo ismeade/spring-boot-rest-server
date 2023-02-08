@@ -3,7 +3,7 @@ package com.ade.demo.server.exception;
 import org.springframework.http.HttpStatus;
 
 /**
- *
+ * 自定义异常
  */
 public class ReturnException extends IllegalArgumentException {
 

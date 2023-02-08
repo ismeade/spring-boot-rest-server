@@ -16,7 +16,7 @@ public class CollectionUtils {
      * @param collection 待检查集合
      * @return true-是相同class; false-不相同class
      */
-    public static boolean isClassConsistent(Collection<Object> collection) {
+    public static boolean isClassConsistent(Collection<?> collection) {
         if (collection.size() <= 1) {
             return true;
         }
